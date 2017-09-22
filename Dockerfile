@@ -1,8 +1,12 @@
-FROM docker
+FROM gitlab/dind
 
-MAINTAINER Jannik Zinkl <jannik.zinkl@trieb.work>
+MAINTAINER Jannik Zinkl <jz@trieb.work>
 
-# Install NodeJS
-# RUN apk update && apk add nodejs
-RUN apk --update add openssh-client git nodejs && rm -rf /var/cache/apk/* && \
-    npm install -g grunt-cli
+RUN apt-get update && \
+apt-get install -y build-essential libfontconfig zip git apt-transport-https ca-certificates curl openssl software-properties-common && \
+curl -sL https://deb.nodesource.com/setup_7.x | bash - && \
+apt-get install -y nodejs && \
+npm install grunt -g && \
+npm install grunt-cli -g && \
+node --version && \
+npm --version
