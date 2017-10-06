@@ -10,4 +10,5 @@ RUN apt-get update && \
   npm install grunt-cli -g && \
   npm install findup-sync resolve nopt -g && \
   node --version && \
-  npm --version
+  npm --version && \
+  apt-get autoremove clean -y    
