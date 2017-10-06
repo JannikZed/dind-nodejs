@@ -11,4 +11,4 @@ RUN apt-get update && \
   npm install findup-sync resolve nopt -g && \
   node --version && \
   npm --version && \
-  apt-get autoremove clean -y    
+  apt-get autoremove -y    
