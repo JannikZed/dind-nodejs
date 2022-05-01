@@ -8,6 +8,7 @@ RUN apt-get update && \
   apt-get install -y nodejs && \
   npm install grunt -g && \
   npm install grunt-cli -g && \
+  npm install --global yarn && \
   npm install findup-sync resolve nopt -g && \
   node --version && \
   npm --version && \
